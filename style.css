@@ -96,8 +96,8 @@ body {
     margin:0 auto;
     border-radius: 10px;
     background: #ffffff;
-    box-shadow: 5px 5px 30px rgb(255, 255, 255),
-    -5px -5px 30px rgb(199, 199, 199);
+    box-shadow: 0 10px 30px rgb(180, 180, 180),
+    0 20px 30px rgb(224, 224, 224);
     padding: 10px;
 }
 .logo_text{
