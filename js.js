@@ -147,7 +147,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 function git(){
-    window.location.href = 'https://www.bing.com';
+    window.location.href = 'https://github.com/Diicck/TwT_tping';
 }
 
 function reload(){
