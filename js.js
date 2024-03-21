@@ -102,6 +102,33 @@ function git(){
     window.location.href = 'https://github.com/Diicck/TwT_tping';
 }
 
-function reload(){
-    location.reload();
+function reload() {
+    // 使用新的随机选择刷新全局变量 selectedLines
+    selectedLines = linesGroups[Math.floor(Math.random() * linesGroups.length)];
+    currentLine = 0; // 将当前行重置为第一行
+
+    // 更新页面上要打的文本为新选中的第一行
+    document.getElementById('textToType').textContent = selectedLines[currentLine];
+
+    // 清空输入字段
+    document.getElementById('typingInput').value = "";
+
+    // 移除输入字段的错误提示样式（如果有的话）
+    document.getElementById('typingInput').classList.remove('error');
+
+    // 如果输入字段被禁用了，则重新启用它
+    document.getElementById('typingInput').disabled = false;
+
+    // 停止当前的计时器
+    clearInterval(intervalId);
+
+    // 重置计时器的 intervalId
+    intervalId = null;
+
+    // 重置开始时间
+    startTime = undefined;
+
+    // 重置已输入的总字符数计数器
+    totalCharsTyped = 0;
 }
+
