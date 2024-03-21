@@ -1,0 +1,102 @@
+*{
+    font-family: "苹方",sans-serif;
+}
+/* 基础重置 */
+body, h1, h2, h3, p, div {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+    height: 100vh;
+}
+
+/* 容器 */
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* 输入区域样式 */
+.input-area {
+    margin: 20px 0;
+}
+
+
+/* 输入框样式 */
+#typingInput {
+    width: 100%;
+    padding: 10px 0;
+    margin-top: 5px;
+    border: 2px solid #ddd;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+#typingInput:focus {
+    border-color: #0056b3;
+    outline: none;
+}
+
+#typingInput.error {
+    border-color: #ff4757;
+}
+
+/* 文本显示区域 */
+#textToType {
+    background-color: #fafafa;
+    border-left: 4px solid #0056b3;
+    padding: 10px;
+    margin-bottom: 20px;
+    white-space: pre-wrap; /* 保持文本的格式，如空格和换行 */
+}
+
+/* 统计信息样式 */
+#stats {
+    font-size: 18px;
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* 统计信息内的文本 */
+#stats p {
+    margin: 10px 0;
+}
+
+/* 提示和错误信息样式 */
+.alert {
+    padding: 20px;
+    background-color: #f44336; /* Red */
+    color: white;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.alert.success {
+    background-color: #4CAF50; /* Green */
+}
+.error{
+    color: #f44336;
+}
+
+.alert.info {
+    background-color: #2196F3; /* Blue */
+}
+#box{
+    width: 70%;
+    height: 40%;
+    margin:0 auto;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 5px 5px 30px rgb(255, 255, 255),
+    -5px -5px 30px rgb(199, 199, 199);
+    padding: 10px;
+}
