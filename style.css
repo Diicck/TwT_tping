@@ -100,3 +100,8 @@ body {
     -5px -5px 30px rgb(199, 199, 199);
     padding: 10px;
 }
+.logo_text{
+    text-align: center;
+    font-size: 48px;
+    margin-bottom: 30px;
+}
