@@ -147,5 +147,9 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 function git(){
-    window.location.href = 'https://www.example.com';
+    window.location.href = 'https://www.bing.com';
+}
+
+function reload(){
+    location.reload();
 }
