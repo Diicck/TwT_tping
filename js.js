@@ -93,6 +93,11 @@ document.addEventListener('DOMContentLoaded', function() {
         updateStats(input);
     });
 });
+let btn1 = document.getElementById("github")
+btn1.addEventListener("click", git)
+
+let btn2 = document.getElementById("reload")
+btn2.addEventListener("click", reload)
 function git(){
     window.location.href = 'https://github.com/Diicck/TwT_tping';
 }
