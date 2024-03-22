@@ -8,6 +8,21 @@ let startTime = new Date();
 let totalCharsTyped = 0;
 let intervalId = null;
 
+function highlightText(input, target) {
+    let highlighted = '';
+
+    for (let i = 0; i < target.length; i++) {
+        if (i < input.length && input[i] !== target[i]) {
+            // 错误的字，用红色高亮
+            highlighted += `<span style="color: red;">${target[i]}</span>`;
+        } else {
+            // 正确或未输入的部分
+            highlighted += target[i];
+        }
+    }
+    document.getElementById('textToType').innerHTML = highlighted;
+}
+
 function updateStats(input) {
     let inputTextChinese = input.match(/[\u4e00-\u9fa5]/g) || [];
     let lineTextChinese = selectedLines[currentLine].match(/[\u4e00-\u9fa5]/g) || [];
@@ -27,6 +42,8 @@ function updateStats(input) {
     // 更新错误提示的逻辑
     let isInputCorrectSoFar = input.trim() === selectedLines[currentLine].slice(0, input.length).trim();
     document.getElementById('typingInput').classList.toggle('error', !isInputCorrectSoFar);
+    // 高亮显示文本
+    highlightText(input, selectedLines[currentLine]);
 
     if (input.trim() === selectedLines[currentLine].trim()) {
         nextLine();
