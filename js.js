@@ -12,7 +12,10 @@ function highlightText(input, target) {
     let highlighted = '';
 
     for (let i = 0; i < target.length; i++) {
-        if (i < input.length && input[i] !== target[i]) {
+        if (i < input.length && input[i] === target[i]) {
+            // 已经输入且正确的字，用蓝色高亮
+            highlighted += `<span style="color: #42A5F5;">${input[i]}</span>`;
+        } else if (i < input.length && input[i] !== target[i]) {
             // 错误的字，用红色高亮
             highlighted += `<span style="color: red;">${target[i]}</span>`;
         } else {
@@ -20,6 +23,7 @@ function highlightText(input, target) {
             highlighted += target[i];
         }
     }
+
     document.getElementById('textToType').innerHTML = highlighted;
 }
 
